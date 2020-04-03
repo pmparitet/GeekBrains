@@ -17,7 +17,7 @@ UPDATE profiles
 SET 
 	is_active = 'false'
 WHERE
-	birthday > '2002-04-01';
+	TIMESTAMPDIFF(YEAR, birthday, now()) <= 18;
 
 
 -- iv. Написать скрипт, удаляющий сообщения «из будущего» (дата позже сегодняшней)
